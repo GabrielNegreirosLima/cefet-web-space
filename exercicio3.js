@@ -1,2 +1,10 @@
 // Faça o exercício dos PARÁGRAFOS aqui
-// Este arquivo AINDA NÃO ESTÁ INCLUÍDO no arquivo HTML
+
+let buttons = document.querySelectorAll('.botao-expandir-retrair');
+
+buttons.forEach(function(buttonEl){
+    buttonEl.addEventListener('click', function(e){
+        let paragraphEl = e.currentTarget.parentNode;
+        paragraphEl.classList.toggle('expandido');
+    });
+});
